@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 
-import github.freeseawind.service.DemoService;
+import github.freeseawind.service.IDemoService;
 
 /** 
  * @author freeseawind   
@@ -24,7 +24,7 @@ import github.freeseawind.service.DemoService;
 public class ConsumerApplication
 {
     @Reference
-    private DemoService demoService;
+    private IDemoService demoService;
     
     public static void main(String[] args)
     {

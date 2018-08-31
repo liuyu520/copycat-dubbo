@@ -17,5 +17,5 @@
     <bean id="demoService" class="github.freeseawind.service.impl.DemoServiceImpl"/>
     
     <!-- 和本地bean一样实现服务 -->
-    <dubbo:service interface="github.freeseawind.service.DemoService" ref="demoService"/>
+    <dubbo:service interface="github.freeseawind.service.IDemoService" ref="demoService"/>
 </beans>

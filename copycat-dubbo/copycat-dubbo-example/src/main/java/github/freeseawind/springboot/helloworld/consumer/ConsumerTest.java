@@ -1,7 +1,8 @@
 package github.freeseawind.springboot.helloworld.consumer;
 
-import static org.junit.Assert.assertEquals;
-
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
+import github.freeseawind.service.IDemoService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Controller;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
-
-import github.freeseawind.service.DemoService;
+import static org.junit.Assert.assertEquals;
 
 /** 
  * @author freeseawind   
@@ -25,7 +23,7 @@ import github.freeseawind.service.DemoService;
 public class ConsumerTest
 {
     @Reference
-    private DemoService demoService;
+    private IDemoService demoService;
     
     @Test
     public void testRPC()

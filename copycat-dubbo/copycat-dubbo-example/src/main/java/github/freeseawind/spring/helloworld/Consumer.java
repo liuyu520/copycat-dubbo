@@ -2,7 +2,7 @@ package github.freeseawind.spring.helloworld;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import github.freeseawind.service.DemoService;
+import github.freeseawind.service.IDemoService;
 
 public class Consumer
 {
@@ -15,7 +15,7 @@ public class Consumer
         context.start();
         
         // Obtaining a remote service proxy
-        DemoService demoService = (DemoService) context.getBean("demoService");
+        IDemoService demoService = (IDemoService) context.getBean("demoService");
         
         // Executing remote methods
         String hello = demoService.sayHello("world");
