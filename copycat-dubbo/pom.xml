@@ -11,6 +11,12 @@
 		<module>copycat-dubbo-example</module>
 		<module>copycat-my-dubbo</module>
 	</modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -39,14 +45,14 @@
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.0.2.RELEASE</version>
+                <version>2.0.4.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>dubbo</artifactId>
-				<version>2.6.2</version>
+                <version>2.6.3</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.curator</groupId>
@@ -58,6 +64,14 @@
 				<artifactId>curator-framework</artifactId>
 				<version>4.0.1</version>
 			</dependency>
-		</dependencies>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok ,自动生成 getter,setter 方法 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.2</version>
+                <scope>provided</scope>
+            </dependency>
+
+        </dependencies>
 	</dependencyManagement>
 </project>
