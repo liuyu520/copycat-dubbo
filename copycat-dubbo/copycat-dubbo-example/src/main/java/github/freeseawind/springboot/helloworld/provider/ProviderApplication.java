@@ -1,10 +1,9 @@
 package github.freeseawind.springboot.helloworld.provider;
 
+import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 
 /** 
  * @author freeseawind   
